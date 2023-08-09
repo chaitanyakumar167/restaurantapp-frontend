@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
+    />
+    <title>Restaurant App</title>
+  </head>
+  <body>
+    <header id="main-header" class="bg-warning text-white p-2 mb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 id="header-title">Restaurant</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div id="main" class="card card-body">
+        <form action="/add" method="post" id="addForm" class="form-inline mb-3">
+          <label for="number" class="form-control-label">Amount:-</label>
+          <input type="number" class="form-control" id="amount" />
+          <label for="dishName" class="form-control-label">Choose Dish:-</label>
+          <input
+            type="text"
+            name="dishName"
+            class="form-control mr-2"
+            id="dishName"
+          />
+          <label for="tableNumber" class="form-control-label"
+            >Choose a Table:-</label
+          >
+          <select
+            class="form-select form-control"
+            name="tableNumber"
+            id="tableNumber"
+            aria-label="Default select example"
+          >
+            <option selected value="Table 1">Table 1</option>
+            <option value="Table 2">Table 2</option>
+            <option value="Table 3">Table 3</option>
+          </select>
+          <input type="submit" id="btn" class="btn btn-dark" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card card-body">
+        <h2 class="title">Table 1</h2>
+        <ul id="table-1" class="list-group"></ul>
+      </div>
+      <div class="card card-body">
+        <h2 class="title">Table 2</h2>
+        <ul id="table-2" class="list-group"></ul>
+      </div>
+      <div class="card card-body">
+        <h2 class="title">Table 3</h2>
+        <ul id="table-3" class="list-group"></ul>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
